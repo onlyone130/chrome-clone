@@ -14,3 +14,6 @@ console.log(player);
 
 player.lastName = "potato";
 console.log(player);
+
+player.points = player.points + 15;
+console.log(player);

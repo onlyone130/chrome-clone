@@ -20,6 +20,22 @@ sayHello("lynn", 21);
 function plus(a, b){
     console.log(a + b);
 }
+//나누기 함수 구현
+function divide(a, b){
+    console.log(a/b);
+}
 
 //위치 순서 중요
 plus(8, 60);
+divide(98, 20);
+
+//함수에 정보 보내기
+const player = {
+    name: "tama",
+    sayHello: function(otherPersonsName){
+    console.log("hello! " + otherPersonsName + " nice to meet you!");
+    },
+};
+
+player.sayHello("tama");
+player.sayHello("lynn");

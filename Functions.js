@@ -15,3 +15,11 @@ function sayHello(nameOfPerson, age){
 sayHello("tama", 10);
 sayHello("dal", 23);
 sayHello("lynn", 21);
+
+//더하기 함수 구현
+function plus(a, b){
+    console.log(a + b);
+}
+
+//위치 순서 중요
+plus(8, 60);

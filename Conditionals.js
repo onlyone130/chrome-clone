@@ -35,3 +35,15 @@ if(isNaN(age) || age < 0){
 } else if(age < 80) {
     console.log("You can do whatever you want.");
 }
+
+
+//boolean AND, OR
+
+// true || ture == true
+// true || false == true
+// false || true == true
+// false || false == false
+// true && true == true
+// true && false == false
+// false && true == false
+// false && false == false

@@ -1,18 +1,28 @@
-const title = document.querySelector("div.hello:first-child h1");
+const h1 = document.querySelector("div.hello:first-child h1");
 
 //listen events
 function handleTitleClick(){
-    title.style.color = "blue";
+    h1.style.color = "blue";
 }
 
 function handleMouseEnter(){
-    title.innerText = "mouse is here!";
+    h1.innerText = "mouse is here!";
 }
 
 function handleMouseLeave(){
-    title.innerText = "mouse is gone";
+    h1.innerText = "mouse is gone";
 }
 
-title.addEventListener("click", handleTitleClick);
-title.addEventListener("mouseenter", handleMouseEnter);
-title.addEventListener("mouseleave", handleMouseLeave);
+function handleWindowResize(){
+    document.body.style.backgroundColor = "tomato";
+}
+
+h1.onclick = handleTitleClick;
+h1.onmouseenter = handleMouseEnter;
+//addEventListener를 사용하게 되면,
+//.removeEventListener를 사용할 수 있음.
+//h1.addEventListener("click", handleTitleClick);
+//h1.addEventListener("mouseenter", handleMouseEnter);
+h1.addEventListener("mouseleave", handleMouseLeave);
+
+window.addEventListener("resize", handleWindowResize);

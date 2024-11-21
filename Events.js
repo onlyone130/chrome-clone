@@ -26,3 +26,23 @@ h1.onmouseenter = handleMouseEnter;
 h1.addEventListener("mouseleave", handleMouseLeave);
 
 window.addEventListener("resize", handleWindowResize);
+
+
+//----------------------------------------------------------
+
+const h1 = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick(){
+    //현재 color 설정
+    const currentColor = h1.style.color;
+    //아무것도 없는 변수 let
+    let newColor;
+    if(h1.style.color === "blue"){
+        newColor = "tomato";
+    } else {
+        newColor = "blue";
+    }
+    h1.style.color = newColor;
+}
+
+h1.addEventListener("click", handleTitleClick);

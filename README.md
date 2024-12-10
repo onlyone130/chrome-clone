@@ -1,4 +1,4 @@
-# chrome-clone
+# chrome-clone challenge with nomadcoders
 
 줌 클론 챌린지
 

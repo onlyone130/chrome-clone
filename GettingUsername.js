@@ -47,3 +47,28 @@ index.html 파일의 구성은 아래와 같다.
 </html>
 
 */
+
+
+//------수정된 app.js
+
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
+
+const HIDDEN_CLASSNAME = "hidden";
+
+
+function onLoginSubmit(event){
+    event.preventDefault();
+    loginForm.classList.add();
+    const username = loginInput.value;
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    console.log(username);
+    //greeting.innerText = "Hello "+ username;
+    greeting.innerText = `Hello ${username}`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+}
+
+loginForm.addEventListener("submit",onLoginSubmit);
+
+

@@ -3,14 +3,24 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
 
+function deleteToDo(event){
+    //console.log(event.target.parentElement);
+    const li = event.target.parentElement;
+    li.remove();
+}
+
 function paintToDo(newTodo){
     //console.log("i will paint", newTodo);
     //html에 들어갈 요소, 태그 생성. 변수명은 li혹은 span 일 필요는 없음
     const li = document.createElement("li");
     const span = document.createElement("span");
+    span.innerText = newTodo;
+    const button = document.createElement("button");
+    button.innerText = "❌";
+    button.addEventListener("click", deleteToDo);
     //li는 span이라는 child를 가지게됨
     li.appendChild(span);
-    span.innerText = newTodo;
+    li.appendChild(button);
     //console.log(li);
     toDoList.appendChild(li);
 }

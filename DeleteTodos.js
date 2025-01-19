@@ -19,8 +19,10 @@ function saveToDos(){
 function deleteToDo(event){
     //console.log(event.target.parentElement);
     const li = event.target.parentElement;
-    console.log(li.id);
+    //console.log(typeof li.id);
     li.remove();
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    saveToDos();
 }
 
 function paintToDo(newTodo){
@@ -76,4 +78,10 @@ if(savedToDos != null){
     //toDos에 parsedToDos를 넣어서 전에 있던 toDo들을 복원
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo);
+}
+
+//array에서 무언가를 삭제할 때, array 내부의 item을 삭제하는 것이 아니라, 실제로는 item을 삭제하고 새로운 array를 새로 만드는 것임.
+function sexyFilter(){
+    //반드시 리턴값은 true
+    
 }
